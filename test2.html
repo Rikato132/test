@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I'm Sorry</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #ffecd2, #fcb69f);
+            color: #333;
+            text-align: center;
+        }
+        .container {
+            padding: 50px;
+        }
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #ff6f61;
+        }
+        p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+        }
+        .button {
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            color: white;
+            background: #ff6f61;
+            border: none;
+            border-radius: 25px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        .button:hover {
+            background: #d45d51;
+        }
+        .memory {
+            margin-top: 30px;
+            font-size: 1.2rem;
+            color: #555;
+        }
+        #confirmation {
+            display: none;
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+        function showConfirmation() {
+            document.getElementById('confirmation').style.display = 'block';
+        }
+        function redirectToThankYou() {
+            window.open('thankyou.html', '_blank'); // Opens thank you page in a new tab
+            window.location.href = 'thankyou.html'; // Optionally redirects the current tab to the thank you page
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>I'm Sorry, [Saanvi]</h1>
+        <p>I didn’t mean to hurt you, and I feel terrible for unintentionally ignoring you. You mean so much to me, and I want to make things right.</p>
+        <p>Will you forgive me?</p>
+        <button class="button" onclick="showConfirmation()">Forgive Me</button>
+        <div id="confirmation">
+            <p>Are you sure?</p>
+            <button class="button" onclick="redirectToThankYou()">Yes, I Forgive You</button>
+        </div>
+        <div class="memory">
+            <p></p>
+        </div>
+    </div>
+</body>
+</html>
+
